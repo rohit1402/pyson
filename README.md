@@ -24,7 +24,7 @@ print(parsed_result)
 json_object = '{"name": "JohnD", "age": 30, "city": "Delhi"}'
 ```
 ```
-parsed_object = parser.parse(json_object)
+parsed_object = parse(json_object)
 ```
 ```
 print(parsed_object)
