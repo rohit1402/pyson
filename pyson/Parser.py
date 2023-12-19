@@ -15,8 +15,8 @@ class Parser:
             return {}
 
         current_token = self.tokens[0]
-        if not self.skip_bracket_check and current_token != OPENING_CURLY_BRACKET:
-            raise Exception(f'Valid JSON should start with {OPENING_CURLY_BRACKET}')
+        if not self.skip_bracket_check and current_token not in [OPENING_CURLY_BRACKET, OPENING_SQUARE_BRACKET]:
+            raise Exception(f'Valid JSON should start with {OPENING_CURLY_BRACKET} or {OPENING_SQUARE_BRACKET}')
 
         self._consume()
         if current_token == OPENING_CURLY_BRACKET:
